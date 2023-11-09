@@ -4,7 +4,6 @@ import hre, { deployments, ethers, w3f } from "hardhat";
 import { parseEther } from "ethers/lib/utils";
 import { Web3FunctionResultV2 } from "@gelatonetwork/web3-functions-sdk/*";
 import {
-  impersonateAccount,
   setBalance,
 } from "@nomicfoundation/hardhat-network-helpers";
 import { Signer, utils } from "ethers";
@@ -42,7 +41,7 @@ describe("MockSwap W3F", function () {
     let userPair = await mockSwap.balanceByUser(adminAddress);
 
     /// W3F First run 
-    const mockSwapW3f = w3f.get("pyth-oracle-w3f");
+    const mockSwapW3f = w3f.get("w3f-stop-pyth");
 
     let userArgs = {
       user: adminAddress,

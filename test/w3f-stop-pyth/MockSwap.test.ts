@@ -88,7 +88,6 @@ describe("MockSwap contract tests", function () {
     await mockSwap.swap(adminAddress,false)
     balanceByUser = await mockSwap.balanceByUser(adminAddress)
    
-    console.log(balanceByUser.toString())
   });
 
 
